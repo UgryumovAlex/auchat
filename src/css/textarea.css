@@ -1,0 +1,12 @@
+.text-area{
+    -fx-background-color: #a67800;
+    -fx-control-inner-background: #f2ff73;
+    -fx-text-fill: #00aa19;
+    -fx-highlight-text-fill: aqua;
+    -fx-highlight-fill: blue;
+}
+
+.text-area{
+    -fx-font-style: italic;
+    -fx-font-size: 20;
+}
