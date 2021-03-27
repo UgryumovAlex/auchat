@@ -1,22 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<VBox alignment="BOTTOM_CENTER" maxHeight="600.0" maxWidth="-Infinity" minHeight="600.0" minWidth="-Infinity" prefHeight="600.0" prefWidth="390.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Controller">
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <stylesheets>
+      <URL value="@/css/style.css" />
+   </stylesheets>
+
    <children>
-      <TextArea prefHeight="399.0" prefWidth="600.0" />
-      <HBox prefHeight="91.0" prefWidth="600.0">
+      <TextArea fx:id="chatArea" editable="false" minHeight="340.0" prefWidth="390.0" VBox.vgrow="ALWAYS">
+         <padding>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </padding></TextArea>
+      <HBox alignment="BOTTOM_RIGHT" maxHeight="50.0" minHeight="50.0" spacing="5.0" VBox.vgrow="ALWAYS">
          <children>
-            <TextField alignment="CENTER" prefHeight="35.0" prefWidth="501.0">
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-            </TextField>
-            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="Button" />
+            <TextField fx:id="textSend" maxHeight="40.0" minHeight="40.0" onAction="#clickSend" HBox.hgrow="ALWAYS" />
+            <Button fx:id="buttonSend" alignment="CENTER" contentDisplay="CENTER" maxHeight="40.0" minHeight="40.0" onAction="#clickSend" text="Send" />
          </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
       </HBox>
    </children>
 </VBox>
