@@ -5,24 +5,24 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Controller">
+<VBox alignment="BOTTOM_CENTER" maxHeight="600.0" maxWidth="-Infinity" minHeight="600.0" minWidth="-Infinity" prefHeight="600.0" prefWidth="390.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Controller">
 
    <stylesheets>
       <URL value="@/css/style.css" />
    </stylesheets>
 
    <children>
-      <TextArea fx:id="chatArea" prefHeight="390.0" prefWidth="390.0" VBox.vgrow="ALWAYS">
+      <TextArea fx:id="chatArea" editable="false" minHeight="340.0" prefWidth="390.0" VBox.vgrow="ALWAYS">
          <padding>
             <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
          </padding></TextArea>
-      <HBox alignment="BOTTOM_RIGHT" prefHeight="50.0" prefWidth="390.0" spacing="5.0" VBox.vgrow="ALWAYS">
+      <HBox alignment="BOTTOM_RIGHT" maxHeight="50.0" minHeight="50.0" spacing="5.0" VBox.vgrow="ALWAYS">
          <children>
-            <TextField fx:id="textSend" prefHeight="25.0" prefWidth="340.0" />
-            <Button fx:id="buttonSend" alignment="CENTER" contentDisplay="CENTER" ellipsisString="Send" mnemonicParsing="false" prefHeight="40.0" prefWidth="50.0" text="Button" />
+            <TextField fx:id="textSend" maxHeight="40.0" minHeight="40.0" onAction="#clickSend" HBox.hgrow="ALWAYS" />
+            <Button fx:id="buttonSend" alignment="CENTER" contentDisplay="CENTER" maxHeight="40.0" minHeight="40.0" onAction="#clickSend" text="Send" />
          </children>
          <padding>
-            <Insets bottom="5.0" top="5.0" />
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </padding>
       </HBox>
    </children>
