@@ -1,12 +1,17 @@
 package project;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
-public class Controller {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class Controller implements Initializable {
 
     @FXML
     private TextArea chatArea;
@@ -22,5 +27,12 @@ public class Controller {
         chatArea.appendText(textSend.getText()+"\n");
         textSend.clear();
         textSend.requestFocus();
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        Platform.runLater(() -> {
+            textSend.requestFocus();
+        });
     }
 }
